@@ -14,4 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-oi, eu sou o gustavo, gosto de pcs no geral, e estou fazendo o curso de desenvolvimento de sistemas.
+oi, eu sou o gustavo, gosto de pcs no geral, e estou fazendo o curso de desenvolvimento de sistemas. 
+🐍 Python
+🌐 HTML
+🎨 CSS
