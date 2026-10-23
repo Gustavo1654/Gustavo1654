@@ -1,20 +1,18 @@
-## Hi there 👋
+# Atividade de Recuperação - Agenda 10 (DSI)
 
-<!--
-**Gustavo1654/Gustavo1654** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Este pacote contém a resolução completa da atividade de recuperação da Agenda 10, desenvolvida por **Paulo**, simulando o papel de um técnico em Desenvolvimento de Sistemas.
 
-Here are some ideas to get you started:
+## 📂 Estrutura de Arquivos
+* `codigo.py`: Script modular em Python com funções e procedimentos comentados.
+* `relatorio.txt`: Relatório completo contendo o plano, justificativas de arquitetura e o resumo do diálogo com a IA.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
-oi, eu sou o gustavo, gosto de pcs no geral, e estou fazendo o curso de desenvolvimento de sistemas. 
-🐍 Python
-🌐 HTML
-🎨 CSS
+## 🛠️ Como Executar o Código
+Certifique-se de ter o Python 3 instalado em sua máquina e execute o comando:
+```bash
+python codigo.py
+```
+
+## 🎯 Critérios Atendidos
+- Clareza e lógica na separação de funções puras e procedimentos.
+- Justificativas sólidas baseadas em boas práticas (baixo acoplamento, alta coesão).
+- Tratamento contra erros de divisão por zero.

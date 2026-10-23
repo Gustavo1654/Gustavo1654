@@ -1,0 +1,32 @@
+================================================================================
+RELATÓRIO DE DESEMPENHO E ORGANIZAÇÃO DE SISTEMAS (AGENDA 10 - DSI)
+Autor: Paulo (Estudante de Desenvolvimento de Sistemas)
+Atividade: Recuperação - Automação de Notas Escolares
+================================================================================
+
+1. PLANO DE ORGANIZAÇÃO DAS FUNÇÕES E PROCEDIMENTOS
+--------------------------------------------------------------------------------
+O sistema foi estruturado seguindo o princípio de Responsabilidade Única (SRP) e a Separação de Conceitos (SoC). Dividimos a lógica em duas categorias essenciais:
+
+* Funções Puras (Processamento / Regras de Negócio):
+  - calcular_media(notas): Recebe uma lista de valores numéricos e retorna a média.
+  - verificar_aprovacao(media, frequencia): Recebe dados processados e retorna a string de status ("Aprovado" ou "Reprovado").
+
+* Procedimentos (Visualização / Output):
+  - gerar_relatorio_aluno(nome, disciplina, notas, frequencia): Orquestra as funções acima e imprime os dados formatados na tela para o usuário.
+
+2. JUSTIFICATIVAS PARA CADA DECISÃO TOMADA
+--------------------------------------------------------------------------------
+* Separação entre Regra de Negócio e Interface: As funções 'calcular_media' e 'verificar_aprovacao' não possuem comandos 'print'. Isso garante baixo acoplamento. Se futuramente a escola decidir exibir as notas em uma página web ou aplicativo mobile em vez do terminal, o código de cálculo permanece 100% idêntico e reutilizável.
+* Tratamento Preventivo de Erros: A função de média verifica explicitamente se a lista de notas está vazia. Isso impede falhas graves de execução do sistema (como o erro ZeroDivisionError).
+* Parametrização Dinâmica: A frequência e as notas são injetadas como argumentos, permitindo flexibilidade caso os critérios de aprovação mudem no futuro.
+
+3. RESUMO DO DIÁLOGO SIMULADO COM A IA (GESTOR DE PROJETOS VIRTUAL)
+--------------------------------------------------------------------------------
+* Dilema 1 (Centralização vs. Descentralização): A IA questionou se não seria mais fácil colocar o 'print' direto na função de média. Eu respondi justificando que centralizar a impressão quebraria a reutilização da função caso precisássemos apenas do dado bruto para um gráfico ou banco de dados. A IA validou meu ponto sobre coesão.
+* Dilema 2 (Tratamento de Exceções): A IA sugeriu pensar no que aconteceria se um professor esquecesse de digitar as notas. Isso me motivou a incluir a validação 'if not notas' no código final, tornando-o mais robusto.
+* Dilema 3 (Escalabilidade): Discutimos a inclusão futura de uma nota de recuperação. Concordamos que a estrutura modular atual permite criar uma função extra 'calcular_recuperacao' sem quebrar as funções existentes.
+
+4. CÓDIGO DA ATIVIDADE
+--------------------------------------------------------------------------------
+O código-fonte completo encontra-se comentado detalhadamente no arquivo 'codigo.py' anexo a este pacote ZIP.
